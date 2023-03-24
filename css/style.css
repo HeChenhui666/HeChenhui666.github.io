@@ -1936,3 +1936,7 @@ img{
     opacity: 1 !important;
     transform: translateX(10px);
 }
+
+#clockBox {
+	margin: 10px auto;
+}

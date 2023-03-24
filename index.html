@@ -57,7 +57,7 @@
                             <ul class="navigation clearfix">
 
                                 <li class="current"><a href="#home">Home</a></li>
-                                <li><a href="#about">About</a></li>
+                                <li><a href="#about">关于我</a></li>
                                 <li><a href="#resume">Resume</a></li>
                                 <li><a href="#services">Services</a></li>
                                 <li><a href="#work">Works</a></li>
@@ -106,7 +106,7 @@
                                 <ul class="main-menu">
                                     <li class="active home"><a class="logo" href="#home"><img src="images/logo.png"
                                                 alt=""></a></li>
-                                    <li><a href="#about"><i class="flaticon-social"></i>About</a></li>
+                                    <li><a href="#about"><i class="flaticon-social"></i>关于我</a></li>
                                     <li><a href="#resume"><i class="flaticon-curriculum"></i>Resume</a></li>
                                     <li><a href="#services"><i class="flaticon-layers-1"></i>Services</a></li>
                                     <li><a href="#work"><i class="flaticon-tools"></i>Works</a></li>
@@ -133,8 +133,8 @@
                                             <span class="typed-title"></span>
                                         </div>
                                     </div>
-                                    <div class="text">Dolor sit amet consectetur elit sed do eiusmod tempor incididunt
-                                        labore dolore mega aliqua enim minim veniam.</div>
+
+                                    <div class="text">A Jump To The Sky And Trun To A Riderkick !</div>
                                     <div class="link-btn">
                                         <a href="#" class="theme-btn btn-style-one">Download CV</a>
                                         <a href="#" class="theme-btn btn-style-two">Hire Me</a>
@@ -146,6 +146,7 @@
                                         <li><a href="#"><span class="fa fa-pinterest"></span></a></li>
                                         <li><a href="#"><span class="fa fa-dribbble"></span></a></li>
                                     </ul>
+                                    <div id="clockBox"></div>
                                 </div>
 
                             </div>
@@ -165,7 +166,7 @@
                                                     <li><strong>性别：</strong>男</li>
                                                     <li><strong>民族：</strong>汉</li>
                                                     <li><strong>籍贯：</strong>浙江-嘉善</li>
-                                                    <li><strong>电话：</strong>183 6730 1063</li>
+                                                    <li><strong>电话：</strong>183 6730 1063(同wx)</li>
                                                     <li><strong>邮箱：</strong>1020415974@qq.com</li>
                                                 </ul>
                                             </div>
@@ -700,65 +701,26 @@
                 <div class="btn play-pause icon-jiediankaishi iconfont"></div>
                 <!-- 下一首按钮 -->
                 <div class="btn next iconfont">&#xe602;</div>
+                <!-- 缩小 -->
+                <div class="btn iconfont" id="handleSmall">¤</div>
             </div>
         </div>
+
+        <!-- 小窗口 -->
+        <div id="player-content3">
+            <div id="player-handleBig">¤</div>
+        </div>
     </div>
-
-    <script>
-        console.log('sdas', document.body.clientWidth);
-        let player = document.getElementById('player');
-        player.style.zIndex = 9999999999;
-        if (document.body.clientWidth < 600) {
-            player.style.position = 'fixed';
-            player.style.bottom = 0;
-            player.style.top = '88vh';
-            player.style.left = '5px';
-        } else {
-            // 鼠标拖拽
-            //鼠标按下事件
-            player.onmousedown = function (e) {
-                //获取x坐标和y坐标
-                x = e.clientX;
-                y = e.clientY;
-
-                //获取左部和顶部的偏移量
-                l = player.offsetLeft;
-                t = player.offsetTop;
-                //开关打开
-                isDown = true;
-                //设置样式
-                player.style.cursor = 'move';
-            }
-            player.onmousemove = function (e) {
-                if (isDown == false) {
-                    return;
-                }
-                //获取x和y
-                var nx = e.clientX;
-                var ny = e.clientY;
-                //计算移动后的左偏移量和顶部的偏移量
-                var nl = nx - (x - l);
-                var nt = ny - (y - t);
-                player.style.left = nl + 'px';
-                player.style.top = nt + 'px';
-            }
-            //鼠标抬起事件
-            player.onmouseup = function () {
-                //开关关闭
-                isDown = false;
-                player.style.cursor = 'default';
-            }
-        }
+    
 
 
-    </script>
-
+    <script src="musicPlayerMaster/js/move.js"></script>
     <script src="musicPlayerMaster/js/jquery-3.4.1.min.js"></script>
     <script src="musicPlayerMaster/js/index.js"></script>
     <!-- 丄音乐播放器 -->
 
     <script src="js/jquery.js"></script>
-
+    <script src="js/clock.js"></script><!-- 时钟 -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="js/owl.js"></script>
