@@ -5,9 +5,9 @@ let player_content3 = document.getElementById('player-content3')
 let handleSmall = document.getElementById('handleSmall')
 let HandleBig = document.getElementById('player-handleBig')
 player.style.zIndex = 9999999;
-player_content1.style.display = 'block'
-player_content2.style.display = 'block'
-player_content3.style.display = 'none'
+player_content1.style.display = 'none'
+player_content2.style.display = 'none'
+player_content3.style.display = 'flex'
 const weizhi = function () {
     if (document.body.clientWidth < 1200) {
         player.style.position = 'fixed';
